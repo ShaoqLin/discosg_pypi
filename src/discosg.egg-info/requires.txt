@@ -1,0 +1,14 @@
+torch<=2.6.0
+transformers
+tqdm
+nltk
+spacy
+sentence-transformers
+pandas
+numpy
+tabulate
+tqdm
+scikit-learn
+peft
+datasets
+huggingface_hub
