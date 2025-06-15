@@ -11,7 +11,7 @@ pip install discosg
 ### Basic Import
 
 ```python
-from discosg import DualTaskSceneGraphParser
+from discosg.parser.DualTaskSceneGraphParser import DualTaskSceneGraphParser
 ```
 
 ### Initialize Model
