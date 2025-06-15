@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='discosg',
-    version='0.0.1',
+    version='0.0.2',
     author='Shaoqing Lin, Zhuang Li',
     author_email='sqlinn@whu.edu.cn',
     description='A package for discourse-level scene graph parsing and evaluation.',
