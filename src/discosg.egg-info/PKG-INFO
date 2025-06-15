@@ -1,4 +1,4 @@
-Metadata-Version: 2.4
+Metadata-Version: 2.1
 Name: discosg
 Version: 0.0.1
 Summary: A package for discourse-level scene graph parsing and evaluation.
@@ -13,33 +13,16 @@ Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
 Classifier: Operating System :: OS Independent
-Requires-Python: >=3.10.0
+Requires-Python: >=3.8.0
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: torch<=2.6.0
 Requires-Dist: transformers
 Requires-Dist: tqdm
 Requires-Dist: nltk
-Requires-Dist: spacy
-Requires-Dist: sentence-transformers
-Requires-Dist: pandas
-Requires-Dist: numpy
-Requires-Dist: tabulate
 Requires-Dist: tqdm
-Requires-Dist: scikit-learn
 Requires-Dist: peft
-Requires-Dist: datasets
 Requires-Dist: huggingface_hub
-Dynamic: author
-Dynamic: author-email
-Dynamic: classifier
-Dynamic: description
-Dynamic: description-content-type
-Dynamic: home-page
-Dynamic: license-file
-Dynamic: requires-dist
-Dynamic: requires-python
-Dynamic: summary
 
 # DualTaskSceneGraphParser Usage Guide
 

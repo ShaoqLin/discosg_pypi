@@ -12,21 +12,14 @@ setup(
     package_dir={'': "src"},
     packages=find_packages(where='src'),
     include_package_data=True,
-    python_requires=">=3.10.0",
+    python_requires=">=3.8.0",
     install_requires=[
         'torch<=2.6.0',
         'transformers',
         'tqdm',
         'nltk',
-        'spacy',
-        'sentence-transformers',
-        'pandas',
-        'numpy',
-        'tabulate',
         'tqdm',
-        'scikit-learn',
         'peft',
-        'datasets',
         'huggingface_hub'
         # Add other dependencies needed for your package
     ],
