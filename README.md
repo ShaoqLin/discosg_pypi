@@ -86,7 +86,10 @@ def main():
         descriptions=descriptions,
         graph_to_fix=graph_to_fix,
         batch_size=2,
-        task="delete_before_insert"
+        task="delete_before_insert",
+        max_input_len=1024,
+        max_output_len=512,
+        num_beams=5
     )
     
     # View results
