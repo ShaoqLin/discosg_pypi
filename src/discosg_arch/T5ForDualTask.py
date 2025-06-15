@@ -16,10 +16,11 @@ class T5ForDualTask(nn.Module):
         lora_alpha: int = 32,
         lora_dropout: float = 0.1,
         lora_target_modules: List[str] = ["q", "v"],
+        device = "cpu",
     ):
         super().__init__()
         from transformers import T5ForConditionalGeneration
-        self.model = T5ForConditionalGeneration.from_pretrained(model_name).to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
+        self.model = T5ForConditionalGeneration.from_pretrained(model_name).to(device)
         self.use_lora = use_lora
 
         self.classifier = nn.Linear(
@@ -33,9 +34,9 @@ class T5ForDualTask(nn.Module):
                 filename="classifier.pt"
             )
             self.classifier.load_state_dict(
-                torch.load(classifier_path, weights_only=True)
+                torch.load(classifier_path, weights_only=True, map_location='cpu')
             )
-            self.classifier.to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
+            self.classifier.to(device)
             self.classifier.eval()  # Set to eval mode
             print("Successfully loaded classifier weights from Hugging Face Hub.")
         except Exception as e:

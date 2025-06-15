@@ -3,8 +3,8 @@ import json
 from typing import Dict, List, Any
 import torch
 from transformers import AutoTokenizer
-from src.discosg_arch.T5ForDualTask import T5ForDualTask
-from src.discosg.triple_utils import extract_triples
+from discosg_arch.T5ForDualTask import T5ForDualTask
+from discosg.triple_utils import extract_triples
 
 from tqdm import tqdm
 
@@ -39,7 +39,7 @@ class DualTaskSceneGraphParser:
         self.lowercase = lowercase
 
         # load model
-        self.model = T5ForDualTask(model_name=model_path, use_lora=False)
+        self.model = T5ForDualTask(model_name=model_path, use_lora=False, device=device)
         self.model.eval()
 
         # get base model name
